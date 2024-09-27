@@ -1,0 +1,65 @@
+Scenarios:
+  - name: Full replacement222
+    description: Full replacement
+    url: "https://{{evil_domain}}"
+    type: redirect_uri
+  - name: Subdomain Test 1
+    description: Subdomain Test 1
+    url: "https://{{evil_domain_prefix}}.{{legit_domain}}"
+    type: redirect_uri
+  - name: Subdomain Test 2
+    description: Subdomain Test 2
+    url: "https://{{evil_domain}}.{{legit_domain}}"
+    type: redirect_uri
+  - name: Subdomain Test 3
+    description: Subdomain Test 3
+    url: "https://{{legit_domain}}.{{evil_domain}}"
+    type: redirect_uri
+  - name: Legitimate domain
+    description: Legitimate domain
+    url: "https://{{legit_domain}}"
+    type: redirect_uri
+  - name: Username trick
+    description: Username trick
+    url: "https://{{legit_domain}}@{{evil_domain}}"
+    type: redirect_uri
+  - name: Decode to question mark 1
+    description: Decode to question mark 1
+    url: "https://{{evil_domain}}%ff@{{legit_domain}}"
+    type: redirect_uri
+  - name: Decode to question mark 2
+    description: Decode to question mark 2
+    url: "https://{{evil_domain}}%bf:@{{legit_domain}}"
+    type: redirect_uri
+  - name: Over-consumption 1
+    description: Over-consumption 1
+    url: "https://{{evil_domain_prefix}}%ff@{{legit_domain}}"
+    type: redirect_uri
+  - name: Over-consumption 2
+    description: Over-consumption 2
+    url: "https://{{evil_domain_prefix}}%ff.{{legit_domain}}"
+    type: redirect_uri
+  - name: Best fit mappings
+    description: Best fit mappings
+    url: "https://{{evil_domain}}／.{{legit_domain}}"
+    type: redirect_uri
+  - name: Evil Slash Trick 1
+    description: Evil Slash Trick 1
+    url: "https://{{evil_domain}}\\@{{legit_domain}}"
+    type: redirect_uri
+  - name: Evil Slash Trick 2
+    description: Evil Slash Trick 2
+    url: "https://{{legit_domain}}\\@{{evil_domain}}"
+    type: redirect_uri
+  - name: Scheme Manipulation
+    description: Scheme Manipulation
+    url: "4{{evil_domain}}://{{legit_domain}}"
+    type: redirect_uri
+  - name: IPv6 Address Parsing Bug
+    description: IPv6 Address Parsing Bug
+    url: "https://{{evil_domain}}\\[{{legit_domain}}]"
+    type: redirect_uri
+  - name: Combined Validator
+    description: Combined Validator
+    url: "https://{{legit_domain}}.{{evil_domain}}\\@{{legit_domain}}"
+    type: redirect_uri
