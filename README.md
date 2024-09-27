@@ -3,6 +3,8 @@
 [![License][license-img]][license]
 
 
+ <img align="right" src="https://github.com/user-attachments/assets/480aa00f-54d9-41fa-bb6b-e65f92fbc19e" alt="LibAFL logo" width="250" heigh="250">
+ 
 ## Overview
 oauth-hunter is a powerful tool designed for intercepting and analyzing OAuth requests using mitmproxy.   
 It captures OAuth requests and performs comprehensive testing on the redirect_uri parameter, evaluating it against a variety of scenarios to identify potential vulnerabilities. 
