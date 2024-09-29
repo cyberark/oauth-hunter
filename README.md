@@ -25,3 +25,9 @@ A related blog post:
 ## Share Your Thoughts And Feedback
 For more comments, suggestions or questions, you can contact Eviatar Gerzi ([@g3rzi](https://twitter.com/g3rzi)) from CyberArk Labs.
 You can find more projects developed by us in https://github.com/cyberark/.
+
+[release-img]: https://img.shields.io/github/release/cyberark/oauth-hunter.svg
+[release]: https://github.com/cyberark/oauth-hunter/releases
+
+[license-img]: https://img.shields.io/github/license/cyberark/oauth-hunter.svg
+[license]: https://github.com/cyberark/oauth-hunter/blob/master/LICENSE
