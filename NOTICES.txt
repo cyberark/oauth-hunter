@@ -2,13 +2,14 @@ Copyright (c) 2024 CyberArk Software Ltd. All rights reserved
 
 oauth-hunter is using the following open source components:
 
-1. mitmproxy/mitmprox (https://github.com/mitmproxy/mitmproxy) : MIT license
+1. mitmproxy/mitmproxy (https://github.com/mitmproxy/mitmproxy) : MIT license
          Copyright (c) 2013, Aldo Cortesi. All rights reserved.
 
 2. tartley/colorama (https://github.com/tartley/colorama) : BSD-3-Clause license
          Copyright (c) 2010 Jonathan Hartley
 
 3. psf/requests (https://github.com/psf/requests) : Apache-2.0 license
+         Copyright 2019 Kenneth Reitz
 
 4. urllib3/urllib3 (https://github.com/urllib3/urllib3) : MIT License
          Copyright (c) 2008-2020 Andrey Petrov and contributors.
@@ -17,9 +18,11 @@ oauth-hunter is using the following open source components:
          Copyright (c) 2004-2012 Leonard Richardson
 
 6. SeleniumHQ/selenium (https://github.com/SeleniumHQ/selenium) : Apache-2.0 license
-         Copyright 2024 Software Freedom Conservancy (SFC)
+         Copyright 2011-2024 Software Freedom Conservancy
+         Copyright 2004-2011 Selenium committers
 
 7. mozilla/geckodriver (https://github.com/mozilla/geckodriver) : MPL-2.0 license (Mozilla Public License Version 2.0)
+         Copyright (c) 2015 Mozilla Corporation
 
 8. theorchard/openpyxl (https://github.com/theorchard/openpyxl) : MIT Licence
          Copyright (c) 2010 openpyxl
