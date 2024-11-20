@@ -16,11 +16,31 @@ This ongoing development aims to provide a more thorough analysis of OAuth imple
 A related blog post:  
 
 
-## Demo  
+## Usage  
+```
+usage: main.py [-h] [--create-excel [CREATE_EXCEL]] [--overwrite] [--proxy-port PROXY_PORT] [--burp-proxy [BURP_PROXY]] [--evil-domain EVIL_DOMAIN] [--yaml-scenarios YAML_SCENARIOS]
+
+OAuth Proxy Tester
+
+options:
+  -h, --help            show this help message and exit
+  --create-excel [CREATE_EXCEL]
+                        Create an Excel file with the given name or use the default name.
+  --overwrite           Overwrite the existing file if it exists.
+  --proxy-port PROXY_PORT
+                        Specify the proxy port.
+  --burp-proxy [BURP_PROXY]
+                        Specify the Burp proxy port. Defaults to 8080 if specified without a value.
+  --evil-domain EVIL_DOMAIN
+                        Specify the evil domain.
+  --yaml-scenarios YAML_SCENARIOS
+                        Path to YAML file with scenarios.
+```
 
 
 ## License  
-
+Copyright (c) 2024 CyberArk Software Ltd. All rights reserved  
+This repository is licensed under  Apache-2.0 License - see [`LICENSE`](LICENSE) for more details.
 
 ## Share Your Thoughts And Feedback
 For more comments, suggestions or questions, you can contact Eviatar Gerzi ([@g3rzi](https://twitter.com/g3rzi)) from CyberArk Labs.
