@@ -1,0 +1,2 @@
+mitmproxy==10.3.0
+openpyxl==3.1.2
