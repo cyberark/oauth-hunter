@@ -89,6 +89,9 @@ def handle_excel_file(create_excel_arg, overwrite_flag):
 
 def create_excel_file(filename):
     #filename = get_unique_filename(filename)
+    directory = os.path.dirname(filename)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
     wb = openpyxl.Workbook()
     ws = wb.active
