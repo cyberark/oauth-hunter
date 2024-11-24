@@ -13,7 +13,6 @@ This allows users to ensure the robustness of their OAuth implementations and sa
 In addition to its current capabilities, we are actively working on expanding the tool's functionality to include testing the state parameter, among other enhancements.   
 This ongoing development aims to provide a more thorough analysis of OAuth implementations, ensuring robust security and resilience against common vulnerabilities.  
 
-A related blog post:  
 
 ## Deployment  
 You will need the following installed:
