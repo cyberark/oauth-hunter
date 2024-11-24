@@ -15,6 +15,29 @@ This ongoing development aims to provide a more thorough analysis of OAuth imple
 
 A related blog post:  
 
+## Deployment  
+You will need the following installed:
+* python 3.x
+* pip3
+
+### Run from source
+Clone the repository:
+~~~
+git clone https://github.com/cyberark/oauth-hunter.git
+~~~
+
+Install module dependencies. (You may prefer to do this within a [Virtual Environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/))
+~~~
+cd ./oauth-hunter
+pip3 install -r requirements.txt
+~~~
+
+Run:
+~~~
+python3 main.py
+~~~
+
+
 
 ## Usage  
 ```
@@ -37,6 +60,11 @@ options:
                         Path to YAML file with scenarios.
 ```
 
+## Contributing
+
+We welcome contributions of all kinds to this repository.  
+For instructions on how to get started and descriptions
+of our development workflows, please see our [contributing guide](https://github.com/cyberark/conjur-api-go/blob/master/CONTRIBUTING.md).
 
 ## License  
 Copyright (c) 2024 CyberArk Software Ltd. All rights reserved  
