@@ -39,6 +39,15 @@ python3 main.py
 
 
 ## Usage  
+
+The tool starts a proxy on the default port `1337`. Ensure you configure your system or tool to listen on this port to intercept and analyze network traffic.  
+
+### Burp Suite Integration
+For advanced usage, the tool can integrate with Burp Suite by specifying the `--burp-proxy` option followed by the port Burp Suite is configured to use.   
+This allows the tool to send test requests through the Burp Suite proxy for enhanced analysis.
+
+
+### Menu
 ```
 usage: main.py [-h] [--create-excel [CREATE_EXCEL]] [--overwrite] [--proxy-port PROXY_PORT] [--burp-proxy [BURP_PROXY]] [--evil-domain EVIL_DOMAIN] [--yaml-scenarios YAML_SCENARIOS]
 
@@ -58,6 +67,9 @@ options:
   --yaml-scenarios YAML_SCENARIOS
                         Path to YAML file with scenarios.
 ```
+
+ 
+
 
 ## Contributing
 
