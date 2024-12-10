@@ -1,11 +1,14 @@
 
+
+# oauth-hunter
+
 [![GitHub release][release-img]][release]
-[![License][license-img]][license]
+[![License][license-img]][license] 
+![Stars](https://img.shields.io/github/stars/cyberark/oauth-hunter)  
 
 
  <img align="right" src="https://github.com/user-attachments/assets/480aa00f-54d9-41fa-bb6b-e65f92fbc19e" alt="LibAFL logo" width="250" heigh="250">
- 
-## Overview
+
 oauth-hunter is a powerful tool designed for intercepting and analyzing OAuth requests using mitmproxy.   
 It captures OAuth requests and performs comprehensive testing on the redirect_uri parameter, evaluating it against a variety of scenarios to identify potential vulnerabilities. 
 This allows users to ensure the robustness of their OAuth implementations and safeguard against common security issues.  
@@ -13,6 +16,19 @@ This allows users to ensure the robustness of their OAuth implementations and sa
 In addition to its current capabilities, we are actively working on expanding the tool's functionality to include testing the state parameter, among other enhancements.   
 This ongoing development aims to provide a more thorough analysis of OAuth implementations, ensuring robust security and resilience against common vulnerabilities.  
 
+--- 
+
+## Table of Contents
+- [Deployment](#deployment)
+  - [Run from source](#run-from-source)
+- [Usage](#usage)
+  - [Burp Suite Integration](#burp-suite-integration)
+  - [Menu](#menu)
+- [Contributing](#contributing)
+- [License](#license)
+- [Share Your Thoughts and Feedback](#share-your-thoughts-and-feedback)
+
+---
 
 ## Deployment  
 You will need the following installed:
