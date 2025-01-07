@@ -38,7 +38,7 @@ REDIRECT_URI_SCENARIOS = [
     (f"{{redirect_scheme}}{{legit_domain}}{{port}}/any", "Replace path with /any"),  # Change path to "/any"
     (f"{{redirect_scheme}}{{legit_domain}}{{port}}{{original_path}}/any", "Replace path with /any at the end"),  # Change path to "/any" at the end
     # TODO: this one should be dynamic, replace one note in the part of the domain.
-    #(f"{{redirect_scheme}}é{{evil_domain}}{{port}}{{original_path}}", "IDN homograph with é"),
+    (f"{{redirect_scheme}}é{{evil_domain}}{{port}}{{original_path}}", "IDN homograph with é"),
 
     # Domain bypasses
     (f"{{redirect_scheme}}{{evil_domain}}%0d%0a{{legit_domain}}{{port}}{{original_path}}", "Carrier trick (https://attacker.com%0d%0atarget.com)"),
@@ -65,6 +65,7 @@ REDIRECT_URI_SCENARIOS = [
 
     # Path Confusion
     # Reference: https://dl.acm.org/doi/fullHtml/10.1145/3627106.3627140
+    (f"{{redirect_scheme}}{{legit_domain}}{{port}}{{original_path}}/../../pwn", f"Basic Path traversal '/../../pwn'"),
     (f"{{redirect_scheme}}{{legit_domain}}{{port}}{{original_path}}/{{evil_domain}}", "Path Confusion 1"),
     (f"{{redirect_scheme}}{{legit_domain}}{{port}}{{original_path}}%2F{{evil_domain}}", "Path Confusion 2"),
     (f"{{redirect_scheme}}{{legit_domain}}{{port}}{{original_path}}/..%2F{{evil_domain}}", "Path Confusion 3"),

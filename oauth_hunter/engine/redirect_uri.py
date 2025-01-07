@@ -24,6 +24,8 @@ def check_response(response_text: str, content_type: str) -> bool:
     is_succeed_bypass_redirect = True
     # Define keywords and phrases indicating failure
     failure_indicators = [
+        "invalid redirect",
+        "invalid_request",
         "url blocked",  # Facebook
         "redirect uri",  # Facebook
         "redirect_uri"  # GitHub & Keycloak
@@ -104,7 +106,7 @@ def run(flow_request, evil_domain, proxy, oauth_object, print_oauht_scenario_cal
         try:
             response = requests.get(new_url, proxies=proxy, verify=False, cookies=flow_request.cookies, allow_redirects=True)
             # Determine success based on status code and response content
-            result_succeed = True if response.status_code in [200, 302] else False
+            result_succeed = True if response.status_code in [200, 302, 404] else False
             if result_succeed:
                 content_type = response.headers.get('Content-Type', '')
                 is_succeed_bypass_redirect = check_response(response.text, content_type)
@@ -117,6 +119,7 @@ def run(flow_request, evil_domain, proxy, oauth_object, print_oauht_scenario_cal
             print_oauht_scenario_callback(scenario)
 
         except requests.exceptions.RequestException as e:
-            print(f"[!] Request failed for {description}: {e}")
+            from colorama import Fore
+            print(f"{Fore.RED}[!]{Fore.RESET}{Fore.LIGHTBLUE_EX} Request failed for {description}: {e}")
 
     return oauth_object
