@@ -166,7 +166,7 @@ def add_test_result_to_excel(filename, test_result):
 
     # go over the OAuth redirect scenarios and add it to the row
     for scenario in test_result.test_scenarios:
-        result = "yes" if scenario.is_succeed else "no"
+        result = "not vulnerable" if scenario.is_succeed else "vulnerable"
         row.append(result)
 
     ws.append(row)
