@@ -35,14 +35,69 @@ oauth_state_string = "randomstring"
 logged_in_as_user = "Github"
 
 @app.route("/")
+# def main():
+#     return """
+#         <h2>Login with GitHub</h2>
+#         <a href="/github-login">Login with GitHub</a>
+#         <h2>Login with Facebook</h2>
+#         <a href="/facebook-login">Login with Facebook</a>
+#     """
 def main():
     return """
-        <h2>Login with GitHub</h2>
-        <a href="/github-login">Login with GitHub</a>
-        <h2>Login with Facebook</h2>
-        <a href="/facebook-login">Login with Facebook</a>
-    """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OAuth Demo</title>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  />
+</head>
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">OAuth Demo</a>
+    </div>
+  </nav>
 
+  <!-- Main container -->
+  <div class="container mt-5">
+    <h1 class="mb-4">Welcome to MyCoolApp!</h1>
+    <div class="row g-3">
+      <!-- GitHub Card -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text">Login with your GitHub account</p>
+            <a href="/github-login" class="btn btn-primary">Login with GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Facebook Card -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Facebook</h5>
+            <p class="card-text">Login with your Facebook account</p>
+            <a href="/facebook-login" class="btn btn-primary">Login with Facebook</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional, for interactive components) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
+    """
 @app.route("/github-login")
 def github_login():
     return redirect(build_auth_url(github_oauth_config))
