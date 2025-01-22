@@ -120,6 +120,7 @@ def run(flow_request, evil_domain, proxy, oauth_object, print_oauht_scenario_cal
 
         except requests.exceptions.RequestException as e:
             from colorama import Fore
-            print(f"{Fore.RED}[!]{Fore.RESET}{Fore.LIGHTBLUE_EX} Request failed for {description}: {e}")
+            print(f"{Fore.RED}[!]{Fore.RESET}{Fore.LIGHTBLUE_EX} Request failed for {description}: {e}\n",
+                  "Are your proxy port is correct?")
 
     return oauth_object

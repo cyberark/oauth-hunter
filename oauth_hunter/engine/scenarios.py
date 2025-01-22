@@ -41,27 +41,27 @@ REDIRECT_URI_SCENARIOS = [
     (f"{{redirect_scheme}}é{{evil_domain}}{{port}}{{original_path}}", "IDN homograph with é"),
 
     # Domain bypasses
-    (f"{{redirect_scheme}}{{evil_domain}}%0d%0a{{legit_domain}}{{port}}{{original_path}}", "Carrier trick (https://attacker.com%0d%0atarget.com)"),
-    (f"//{{evil_domain}}{{port}}{{original_path}}", "No scheme (//attacker.com)"),
-    (f"{{redirect_scheme}}{{legit_domain}}@{{evil_domain}}{{port}}{{original_path}}", "Username trick (https://target.com@attacker.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}%ff@{{legit_domain}}{{port}}{{original_path}}", "Decode to question mark 1 (https://attacker%ff@target.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}%bf:@{{legit_domain}}{{port}}{{original_path}}", "Decode to question mark 2 (https://attacker.com%bf:@target.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}%ff@{{legit_domain}}{{port}}{{original_path}}", "Over-consumption 1 (https://attacker.com%ff@target.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}%ff.{{legit_domain}}{{port}}{{original_path}}", "Over-consumption 2 (https://attacker%ff.target.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}／.{{legit_domain}}{{port}}{{original_path}}", "Best fit mappings 1 (https://attacker.com/.target.com)"),
-    (f"{{redirect_scheme}}{{legit_domain}}／@{{evil_domain}}{{port}}{{original_path}}", "Best fit mappings 2 (https://target.com/@attacker.com)"),
-    (f"{{redirect_scheme}}{{evil_domain}}\\@{{legit_domain}}{{port}}{{original_path}}", "Evil Slash Trick 1 (https://attacker.com\@target.com)"),
-    (f"{{redirect_scheme}}{{legit_domain}}\\@{{evil_domain}}{{port}}{{original_path}}", "Evil Slash Trick 2 (https://target.com\@attacker.com)"),
-    (f"4{{evil_domain}}://{{legit_domain}}{{port}}{{original_path}}", "Scheme Manipulation"),
-    (f"{{redirect_scheme}}{{evil_domain}}\\[{{legit_domain}}]{{port}}{{original_path}}", "IPv6 Address Parsing Bug"),
-    (f"{{redirect_scheme}}{{legit_domain}}.{{evil_domain}}\\@{{legit_domain}}{{port}}{{original_path}}", "Combined Validator"),
-    (f"{{evil_domain}}{{legit_domain}}{{port}}%2f%2f.{{legit_domain}}{{original_path}}", "Domain Bypass 1"),
-    (f"{{evil_domain}}{{legit_domain}}{{port}}%5c%5c.{{legit_domain}}{{original_path}}", "Domain Bypass 2"),
-    (f"{{evil_domain}}{{legit_domain}}{{port}}%3F.{{legit_domain}}{{original_path}}", "Domain Bypass 3"),
-    (f"{{evil_domain}}{{legit_domain}}{{port}}%23.{{legit_domain}}{{original_path}}", "Domain Bypass 4"),
-    # TODO: check about this 80 port, it can make problem if we have custom port, although it's not common.
-    (f"{{redirect_scheme}}{{legit_domain}}{{port}}:80%40{{evil_domain}}{{original_path}}", "Domain Bypass 5"),
-    (f"{{redirect_scheme}}{{legit_domain}}{{port}}%2e{{evil_domain}}{{original_path}}", "Domain Bypass 6"),
+    # (f"{{redirect_scheme}}{{evil_domain}}%0d%0a{{legit_domain}}{{port}}{{original_path}}", "Carrier trick (https://attacker.com%0d%0atarget.com)"),
+    # (f"//{{evil_domain}}{{port}}{{original_path}}", "No scheme (//attacker.com)"),
+    # (f"{{redirect_scheme}}{{legit_domain}}@{{evil_domain}}{{port}}{{original_path}}", "Username trick (https://target.com@attacker.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}%ff@{{legit_domain}}{{port}}{{original_path}}", "Decode to question mark 1 (https://attacker%ff@target.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}%bf:@{{legit_domain}}{{port}}{{original_path}}", "Decode to question mark 2 (https://attacker.com%bf:@target.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}%ff@{{legit_domain}}{{port}}{{original_path}}", "Over-consumption 1 (https://attacker.com%ff@target.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}%ff.{{legit_domain}}{{port}}{{original_path}}", "Over-consumption 2 (https://attacker%ff.target.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}／.{{legit_domain}}{{port}}{{original_path}}", "Best fit mappings 1 (https://attacker.com/.target.com)"),
+    # (f"{{redirect_scheme}}{{legit_domain}}／@{{evil_domain}}{{port}}{{original_path}}", "Best fit mappings 2 (https://target.com/@attacker.com)"),
+    # (f"{{redirect_scheme}}{{evil_domain}}\\@{{legit_domain}}{{port}}{{original_path}}", "Evil Slash Trick 1 (https://attacker.com\@target.com)"),
+    # (f"{{redirect_scheme}}{{legit_domain}}\\@{{evil_domain}}{{port}}{{original_path}}", "Evil Slash Trick 2 (https://target.com\@attacker.com)"),
+    # (f"4{{evil_domain}}://{{legit_domain}}{{port}}{{original_path}}", "Scheme Manipulation"),
+    # (f"{{redirect_scheme}}{{evil_domain}}\\[{{legit_domain}}]{{port}}{{original_path}}", "IPv6 Address Parsing Bug"),
+    # (f"{{redirect_scheme}}{{legit_domain}}.{{evil_domain}}\\@{{legit_domain}}{{port}}{{original_path}}", "Combined Validator"),
+    # (f"{{evil_domain}}{{legit_domain}}{{port}}%2f%2f.{{legit_domain}}{{original_path}}", "Domain Bypass 1"),
+    # (f"{{evil_domain}}{{legit_domain}}{{port}}%5c%5c.{{legit_domain}}{{original_path}}", "Domain Bypass 2"),
+    # (f"{{evil_domain}}{{legit_domain}}{{port}}%3F.{{legit_domain}}{{original_path}}", "Domain Bypass 3"),
+    # (f"{{evil_domain}}{{legit_domain}}{{port}}%23.{{legit_domain}}{{original_path}}", "Domain Bypass 4"),
+    # # TODO: check about this 80 port, it can make problem if we have custom port, although it's not common.
+    # (f"{{redirect_scheme}}{{legit_domain}}{{port}}:80%40{{evil_domain}}{{original_path}}", "Domain Bypass 5"),
+    # (f"{{redirect_scheme}}{{legit_domain}}{{port}}%2e{{evil_domain}}{{original_path}}", "Domain Bypass 6"),
 
     # Path Confusion
     # Reference: https://dl.acm.org/doi/fullHtml/10.1145/3627106.3627140
@@ -142,7 +142,20 @@ def initialize_redirect_uri_scenarios():
 
 import yaml
 # TODO: Add an option to load JSON with scenarios
+import os
+import urllib.parse
+
+def sanitize_path(path):
+    # Remove any URL encoding
+    path = urllib.parse.unquote(path)
+    # Normalize the path to remove any traversal characters
+    path = os.path.normpath(path)
+    # Ensure the path is absolute
+    path = os.path.abspath(path)
+    return path
+
 def load_scenarios_from_yaml(yaml_path):
+    yaml_path = sanitize_path(yaml_path)
     with open(yaml_path, 'r', encoding='utf8') as file:
         data = yaml.safe_load(file)
     scenarios = [(item['url'], item['description']) for item in data['Scenarios']]
