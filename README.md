@@ -84,17 +84,17 @@ options:
                         Path to YAML file with scenarios.
 ```
 
- 
-
 
 ## Contributing
-
 We welcome contributions of all kinds to this repository.  
 For instructions on how to get started and descriptions
 of our development workflows, please see our [contributing guide](https://github.com/cyberark/oauth-hunter/blob/main/CONTRIBUTING.md).
 
+## Disclaimer and Warranty  
+This tool is intended solely for internal use within your organization for identifying potential OAuth implementation issues in environments you own or are authorized to assess.  
+
 ## License  
-Copyright (c) 2024 CyberArk Software Ltd. All rights reserved  
+Copyright (c) 2025 CyberArk Software Ltd. All rights reserved  
 This repository is licensed under  Apache-2.0 License - see [`LICENSE`](LICENSE) for more details.
 
 ## Share Your Thoughts And Feedback
