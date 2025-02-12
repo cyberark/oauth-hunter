@@ -84,6 +84,9 @@ options:
                         Path to YAML file with scenarios.
 ```
 
+## Display    
+![oauth-hunter-demo](https://github.com/user-attachments/assets/f2ef030e-475c-4ce1-8b89-2c29bfac75e1)
+
 
 ## Contributing
 We welcome contributions of all kinds to this repository.  
