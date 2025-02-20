@@ -16,6 +16,8 @@ This allows users to ensure the robustness of their OAuth implementations and sa
 In addition to its current capabilities, we are actively working on expanding the tool's functionality to include testing to the state parameter, among other enhancements.   
 This ongoing development aims to provide a more thorough analysis of OAuth implementations, ensuring robust security and resilience against common vulnerabilities.  
 
+The tool was published as part of the "How Secure Is Your OAuth? Insights from 100 Websites" research https://www.cyberark.com/resources/threat-research-blog/how-secure-is-your-oauth-insights-from-100-websites.  
+
 --- 
 
 ## Table of Contents
