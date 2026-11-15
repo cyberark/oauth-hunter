@@ -3,3 +3,4 @@ openpyxl==3.1.2
 PyYAML==6.0.2
 requests==2.32.3
 beautifulsoup4==4.12.3
+soupsieve>=4.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
